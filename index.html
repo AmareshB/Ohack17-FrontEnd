@@ -3,14 +3,24 @@
 <head>
 	<title>OHACK 17</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script  src="./lib/angular.js"></script>
+	<script  src="app.js"></script>
+	<script src="http://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 </head>
-<body ng-cloak ng-app = "myApp"  ng-controller="testController">
+<body ng-cloak ng-app = "myApp"  ng-controller="rootController">
 <div class= "container">
 	<h3>Basic heading</h3>
 	<h4>{{aVal}}</h4>
 	<h4>{{bVal}}</h4>
 </div>
-	<script  src="./lib/angular.js"></script>
-	<script  src="app.js"></script>
+	
+	<a ui-sref="login" ui-sref-active="active">Login</a>
+
+		<!-- Main Container Starts -->
+		<div class="container-fluid">
+			<ui-view></ui-view>
+		</div>
+		<!-- Main Container Ends -->
+
 </body>
 </html>
