@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router', 'DashBoard']);
 
 app.controller('rootController', ['$scope', '$state', function($scope, $state) {
     $scope.aVal = 10;
@@ -23,7 +23,7 @@ app.config(function($stateProvider) {
         controller: 'DashBoardController'
     };
 
-    
+
     $stateProvider.state(loginState);
     $stateProvider.state(productState);
 });
