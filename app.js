@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router', 'DashBoard']);
+var app = angular.module('myApp', ['ui.router', 'DashBoard','Login']);
 
 app.controller('rootController', ['$scope', '$state', function($scope, $state) {
     $scope.aVal = 10;
@@ -9,11 +9,13 @@ app.controller('rootController', ['$scope', '$state', function($scope, $state) {
 }]);
 
 
-app.config(function($stateProvider) {
+app.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
+$urlRouterProvider.otherwise('/login');
     var loginState = {
         name: 'login',
         url: '/login',
-        template: '<h3>Login Page aa <a class="btn btn-default" href="#/product">More Info</a> </h3>'
+        templateUrl: './views/login.html',
+        controller: 'LoginController'
     };
 
     var productState = {
@@ -26,4 +28,4 @@ app.config(function($stateProvider) {
 
     $stateProvider.state(loginState);
     $stateProvider.state(productState);
-});
+}]);
