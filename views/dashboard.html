@@ -2,8 +2,8 @@
   <h4>List Your Availability to Book an Appointment</h4>
   <form>
     <div class="form-group">
-      <textarea class="form-control" rows="3" id="timings" ng-bind="clientAvail"></textarea>
-      <button class="btn btn-primary" type="submit" ng-click = "submitAvailability()" >Submit Availability</button>
+      <textarea class="form-control" rows="3" id="timings" ng-model="clientAvail"></textarea>
+      <button class="btn btn-primary" type="button" ng-click = "submitAvailability()" >Submit Availability</button>
     </div>
   </form>
 </div>

@@ -24,11 +24,11 @@ app.controller('AdminLoginController', ['$scope', '$location', 'utilsService',
                     $scope.error = "";
                     if (response) {
                         if (response.role_id == 0) {
-                        	$location.path('adminDashboard');
+                        	$location.path('analytics');
                         } else if(response.role_id == 1) {
-                        	 $location.path('schedulerDashBoard');
-                        } else {
-                        	$location.path('login');
+                        	 $location.path('schedule');
+                        } else if(response.role_id == 2) {
+                        	$location.path('adminDashboard');
                         }
                     } else {
                     	$location.path('login');

@@ -26,13 +26,13 @@ app.controller('AdminDashBoardController', ['$scope', 'utilsService',
                 $scope.current = false;
                 $scope.history = true;
             }
-             $scope.showFeedBackDiv = false;
+            $scope.showFeedBackDiv = false;
         };
 
         $scope.showFeedBack = function(history) {
-           // $dialog.dialog({}).open('modalContent.html');
-           $scope.feedback = history.feedback;
-           $scope.showFeedBackDiv = true;
+            // $dialog.dialog({}).open('modalContent.html');
+            $scope.feedback = history.feedback;
+            $scope.showFeedBackDiv = true;
         }
 
 
@@ -49,6 +49,13 @@ app.controller('AdminDashBoardController', ['$scope', 'utilsService',
             $scope.historyData = utilsService.getClientHistory();
 
         };
+
+        $scope.submitComments = function() {
+            utilsService.putComments($scope.feedback)
+                .success(function(response) {
+                    alert("Successfull saved.");
+                }).error(function(err) {});
+        }
 
 
         init();

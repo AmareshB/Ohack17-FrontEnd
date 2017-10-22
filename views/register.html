@@ -1,5 +1,5 @@
 <div  class= "container" ng-controller='RegisterController'>
-<form class="form-horizontal" action='' ng-submit="onClick1()" method="POST" name="myForm">
+<form class="form-horizontal" name="myForm">
   <fieldset>
     <div id="legend">
       <legend class="" style="font-size:2em;text-align: center;font-weight:bold;">Registration</legend>
@@ -267,7 +267,7 @@
     <div class="control-group" style="margin-top:2.5%">
       <!-- Button -->
       <div class="controls">
-        <input class="btn btn-success" type="submit" value="submit" style="font-size:1.25em" ng-disabled="myForm.$invalid"></input>
+        <input class="btn btn-success" type="button" value="submit" style="font-size:1.25em" ng-disabled="myForm.$invalid" ng-click = "onClick1()"></input>
       </div>
     </div>
 

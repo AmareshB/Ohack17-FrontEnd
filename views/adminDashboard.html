@@ -54,5 +54,6 @@
 
 	<div class="container" ng-if="showFeedBackDiv == true">
 		<h4>Comments for the Client</h4>
-		{{feedback}}
+		<input type="text" id="feedback" class="form-control" placeholder="Comments" required autofocus ng-model = "feedback">
+		<button class="btn btn-lg btn-primary " type="button" ng-click = "submitComments()" >Register</button>
 	</div>

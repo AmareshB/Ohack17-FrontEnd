@@ -146,13 +146,13 @@ var init = function() {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: 'Length of Session in hrs'
+                        labelString: 'Meeting Date'
                     }
                 }],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: 'Meeting Date'
+                        labelString: 'Length of Session in hrs'
                     }
                 }]
             }

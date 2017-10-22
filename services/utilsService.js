@@ -15,7 +15,8 @@ app.service('utilsService', function($http) {
             id: "sd1",
             firstName: "asd",
             lastName: "dfsg",
-            userName: "as"
+            userName: "as",
+            feedback: "hello"
         }, {
             id: "sd2",
             firstName: "asd",
@@ -25,26 +26,104 @@ app.service('utilsService', function($http) {
             id: "sd3",
             firstName: "asd",
             lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
+        }, {
+            id: "sd1",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
+        }, {
+            id: "sd2",
+            firstName: "asd",
+            lastName: "dfsg",
             userName: "as"
+        }, {
+            id: "sd3",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
+        }, {
+            id: "sd1",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
+        }, {
+            id: "sd2",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as"
+        }, {
+            id: "sd3",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
+        }, {
+            id: "sd1",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
+        }, {
+            id: "sd2",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as"
+        }, {
+            id: "sd3",
+            firstName: "asd",
+            lastName: "dfsg",
+            userName: "as",
+            feedback: "hello"
         }];
 
         return data;
 
     };
     this.loginAdmin = function(username, pwd) {
+        console.log("::" + username + pwd);
         return $http.post('http://nmtsa.herokuapp.com/admin', {
             "username": username,
             "password": pwd
         }, {});
+
     };
 
     this.login = function(username, pwd) {
         return $http.post('http://nmtsa.herokuapp.com/login', {
+            //return $http.post('http://ec2-13-59-238-248.us-east-2.compute.amazonaws.com:8082/login', {
             "username": username,
             "password": pwd
         }, {});
     };
 
+    this.submiAvailability = function(timings) {
+        return $http.post('http://nmtsa.herokuapp.com/schedule_appointment', {
+            "req_text": timings
+        }, {});
+    };
+
+    this.register = function(username, pwd, fName, lName, date, temp, phone, pFirstName, pLastName, email, address, reason, selectedValues) {
+        return $http.post('http://nmtsa.herokuapp.com/registerUser', {
+            "username": username,
+            "password": pwd,
+            "first_name": fName,
+            "last_name": lName,
+            "dob": date,
+            "diagnosis": temp,
+            "phone_number": phone,
+            "parent_first_name": pFirstName,
+            "parent_last_name": pLastName,
+            "email": email,
+            "address": address,
+            "refferal_reason": reason,
+            "funding": selectedValues
+        }, {});
+    };
 
     // this.sendRequest=function()
     // {    

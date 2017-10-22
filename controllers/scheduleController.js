@@ -11,7 +11,7 @@ app.controller('scheduleController', ['$scope', '$location', 'utilsService',
         
         $scope.schedule = function() {
             console.log("in submit fn");
-            alert("Scheduled successfully")
+            alert("Scheduled successfully");
             $location.path('schedulerDashBoard');
         }
 
