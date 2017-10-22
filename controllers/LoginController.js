@@ -9,10 +9,14 @@ app.controller('LoginController', ['$scope', '$location',
 
         $scope.submit = function() {
             console.log("in submit fn");
-           $location.path( 'dashboard' );
-          //  $urlRouterProvider.when('/login', '/dashboard');
+            $location.path('dashboard');
         }
 
+        $scope.register = function() {
+            console.log("in submit fn");
+            $location.path('register');
+        }
+        
         init();
     }
 ]);
