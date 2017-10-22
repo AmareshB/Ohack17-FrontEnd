@@ -4,7 +4,7 @@ app.controller('LoginController', ['$scope',
     function($scope) {
 
         var init = function() {
-            
+
         }
 
         init();
