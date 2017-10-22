@@ -1,6 +1,6 @@
 var app = angular.module('AdminDashBoard', []);
 
-app.controller('AdminDashBoardController', ['$scope', 'utilsService',
+app.controller('AdminDashboardController', ['$scope', 'utilsService',
     function($scope, utilsService) {
 
 
@@ -14,7 +14,7 @@ app.controller('AdminDashBoardController', ['$scope', 'utilsService',
             $scope.$watch('clientAvail', function(newVal) {
                 putData();
             });
-
+''
         };
 
         $scope.showCurrentORHistory = function(val) {

@@ -39,7 +39,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         name: 'adminDashboard',
         url: '/adminDashboard',
         templateUrl: './views/adminDashboard.html',
-        controller: 'AdminDashBoardController'
+        controller: 'AdminDashboardController'
     };
 
     var schedulerDashBoardState = {
