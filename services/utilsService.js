@@ -7,7 +7,7 @@ app.service('utilsService', function($http) {
         console.log("in servcies");
         //return $http.get('/util/categoryColors');
 
-        /* $http.get('http://10.143.191.81:8082/').success(function(response) {
+      /*  $http.get('http://10.143.191.81:8082/').success(function(response) {
             console.log(response);
         });*/
 
@@ -15,99 +15,28 @@ app.service('utilsService', function($http) {
             id: "sd1",
             firstName: "asd",
             lastName: "dfsg",
-            userName: "12",
-            feedback: "asd"
+            userName: "as"
         }, {
             id: "sd2",
             firstName: "asd",
             lastName: "dfsg",
-            userName: "23"
+            userName: "as"
         }, {
             id: "sd3",
             firstName: "asd",
             lastName: "dfsg",
-            userName: "234d",
-            feedback: "123445dsaf"
-        }, {
-            id: "sd1",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "12",
-            feedback: "asd"
-        }, {
-            id: "sd2",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "23"
-        }, {
-            id: "sd3",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "234d",
-            feedback: "123445dsaf"
-        }, {
-            id: "sd1",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "12",
-            feedback: "asd"
-        }, {
-            id: "sd2",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "23"
-        }, {
-            id: "sd3",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "234d",
-            feedback: "123445dsaf"
-        }, {
-            id: "sd1",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "12",
-            feedback: "asd"
-        }, {
-            id: "sd2",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "23"
-        }, {
-            id: "sd3",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "234d",
-            feedback: "123445dsaf"
-        }, {
-            id: "sd1",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "12",
-            feedback: "asd"
-        }, {
-            id: "sd2",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "23"
-        }, {
-            id: "sd3",
-            firstName: "asd",
-            lastName: "dfsg",
-            userName: "234d",
-            feedback: "123445dsaf"
+            userName: "as"
         }];
 
         return data;
 
     };
 
-    this.login = function(username, pwd) {
-        return $http.post('http://nmtsa.herokuapp.com/login', {
-            "username": username,
-            "password": pwd
-        }, {});
-    };
+
+    // this.sendRequest=function()
+    // {
+       
+    // }
 
 
 });

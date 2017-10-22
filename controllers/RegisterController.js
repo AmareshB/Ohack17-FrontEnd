@@ -57,7 +57,31 @@ app.controller('RegisterController', ['$scope', '$http',
         
          $scope.onClick1=function()
          {
-         //console.log("asf");
+
+// var url='http://nmtsa.herokuapp.com/registerUser'
+//          var xsrf = $.param({username:$scope.uName,
+//          password:$scope.pwd,
+//          first_name:$scope.fName,
+//          last_name:$scope.lName,
+//          dob:$scope.date,
+//          diagnosis:$scope.temp,
+//          phone_number:$scope.phone,
+//          parent_first_name:$scope.pFirstName,
+//          parent_last_name:$scope.pLastName,
+//          email:$scope.email,
+//          address:$scope.address,
+//          refferal_reason:$scope.reason,
+//          funding:$scope.selectedValues});
+// $http({
+//     method: 'POST',
+//     url: url,
+//     data: xsrf,
+//     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+// }).success(function(data)
+// {
+//   console.log("Success");
+// });
+        // console.log("asf");
          $http.post('http://nmtsa.herokuapp.com/registerUser',{username:$scope.uName,
          password:$scope.pwd,
          first_name:$scope.fName,
@@ -70,7 +94,7 @@ app.controller('RegisterController', ['$scope', '$http',
          email:$scope.email,
          address:$scope.address,
          refferal_reason:$scope.reason,
-         funding:$scope.selectedValues},{}).success(function(data)
+         funding:$scope.selectedValues}).success(function(data)
            {
            console.log("Success");
            console.log(data);
