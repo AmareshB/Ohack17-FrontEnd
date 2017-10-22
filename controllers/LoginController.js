@@ -4,8 +4,7 @@ app.controller('LoginController', ['$scope', '$location',
     function($scope, $location) {
 
         var init = function() {
-            alert("in alert of login");
-            console.log("in init fn");
+
         }
 
         $scope.submit = function() {
