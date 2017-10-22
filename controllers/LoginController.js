@@ -12,13 +12,15 @@ app.controller('LoginController', ['$scope', '$location', 'utilsService',
             console.log("in submit fn");
             console.log($scope.emailValue);
             if ($scope.emailValue != "" && $scope.pwdValue != "") {
-                utilsService.login().success(function() {
+                utilsService.login(
+                    $scope.emailValue,
+                    $scope.pwdValue
+                ).success(function(response) {
                     $location.path('dashboard');
-                });
-            } else {	// TODO remove this
-            	 utilsService.login().success(function() {
+                }).error(function(error) {
+                    console.log(error);
                     $location.path('dashboard');
-                });
+                });;
             }
 
 

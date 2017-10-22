@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['utils', 'ui.router', 'DashBoard', 'Login', 'Register', 'adminLogin', 'AdminDashBoard']);
+var app = angular.module('myApp', ['utils', 'ui.router', 'DashBoard', 'Login', 'Register', 'adminLogin', 'AdminDashBoard', 'schedulerDashBoard']);
 
 app.controller('rootController', ['$scope', '$state', function($scope, $state) {
     $scope.aVal = 10;

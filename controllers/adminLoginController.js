@@ -11,7 +11,7 @@ app.controller('AdminLoginController', ['$scope', '$location', 'utilsService',
         $scope.submit = function() {
             console.log("in submit fn");
             console.log($scope.emailValue);
-            $location.path('adminDashboard');
+            $location.path('schedulerDashBoard');
             /*if ($scope.emailValue != "" && $scope.pwdValue != "") {
                 utilsService.login().success(function() {
                     $location.path('dashboard');
