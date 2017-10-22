@@ -58,6 +58,8 @@ app.controller('RegisterController', ['$scope', '$http',
          $scope.onClick1=function()
          {
 
+ 
+
 // var url='http://nmtsa.herokuapp.com/registerUser'
 //          var xsrf = $.param({username:$scope.uName,
 //          password:$scope.pwd,

@@ -50,6 +50,22 @@
     <link href="css/signin.css" rel="stylesheet">
 
 </head>
+
+<style type="text/css">
+  
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+</style>
 <body ng-cloak ng-app = "myApp"  ng-controller="rootController">
 <!-- <div class= "container"> -->
 
@@ -71,6 +87,11 @@
 </div>
 
 
+<video  autoplay loop id="video-background" muted plays-inline>
+  <source src="video/Heaven.mp4" type="video/mp4">
+</video>
+
+
 	
 	<!-- <a ui-sref="dashboard" ui-sref-active="active">DashBoard</a> -->
 
@@ -86,4 +107,5 @@
 		<!-- Main Container Ends -->
 
 </body>
+
 </html>
