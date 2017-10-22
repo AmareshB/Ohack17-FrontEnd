@@ -21,6 +21,8 @@ app.controller('LoginController', ['$scope', '$location', 'utilsService',
                     console.log(error);
                     $location.path('dashboard');
                 });;
+            } else {
+            	
             }
 
 

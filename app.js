@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['utils', 'ui.router', 'DashBoard', 'Login', 'Register', 'adminLogin', 'AdminDashBoard', 'schedulerDashBoard']);
+var app = angular.module('myApp', ['utils', 'ui.router', 'DashBoard', 'Login', 'Register', 'adminLogin', 'AdminDashBoard', 'schedulerDashBoard', 'schedule','analytics']);
 
 app.controller('rootController', ['$scope', '$state', function($scope, $state) {
     $scope.aVal = 10;
@@ -49,6 +49,20 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         controller: 'schedulerDashBoardController'
     };
 
+    var scheduleState = {
+        name: 'schedule',
+        url: '/schedule',
+        templateUrl: './views/schedule.html',
+        controller: 'scheduleController'
+    };
+
+    var analyticsState = {
+        name: 'analytics',
+        url: '/analytics',
+        templateUrl: './views/analytics.html',
+        controller: 'analyticsController'
+    };
+
 
     $stateProvider.state(loginState);
     $stateProvider.state(productState);
@@ -56,4 +70,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     $stateProvider.state(adminState);
     $stateProvider.state(adminDashBoardState);
     $stateProvider.state(schedulerDashBoardState);
+    $stateProvider.state(scheduleState);
+    $stateProvider.state(analyticsState);
 }]);
