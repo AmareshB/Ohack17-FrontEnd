@@ -1,6 +1,6 @@
-var app = angular.module('Login', []);
+var app = angular.module('adminLogin', []);
 
-app.controller('LoginController', ['$scope', '$location', 'utilsService',
+app.controller('AdminLoginController', ['$scope', '$location', 'utilsService',
     function($scope, $location, utilsService) {
 
         var init = function() {
@@ -11,15 +11,15 @@ app.controller('LoginController', ['$scope', '$location', 'utilsService',
         $scope.submit = function() {
             console.log("in submit fn");
             console.log($scope.emailValue);
-            if ($scope.emailValue != "" && $scope.pwdValue != "") {
+            $location.path('adminDashboard');
+            /*if ($scope.emailValue != "" && $scope.pwdValue != "") {
                 utilsService.login().success(function() {
                     $location.path('dashboard');
                 });
-            } else {	// TODO remove this
-            	 utilsService.login().success(function() {
-                    $location.path('dashboard');
-                });
-            }
+            } else { // TODO remove this
+            	console.log("in here else part");
+               $location.path('adminDashboard');
+            }*/
 
 
         }
