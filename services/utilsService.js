@@ -31,6 +31,12 @@ app.service('utilsService', function($http) {
         return data;
 
     };
+    this.loginAdmin = function(username, pwd) {
+        return $http.post('http://nmtsa.herokuapp.com/admin', {
+            "username": username,
+            "password": pwd
+        }, {});
+    };
 
     this.login = function(username, pwd) {
         return $http.post('http://nmtsa.herokuapp.com/login', {

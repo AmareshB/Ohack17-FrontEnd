@@ -6,20 +6,44 @@ app.controller('AdminLoginController', ['$scope', '$location', 'utilsService',
         var init = function() {
             $scope.emailValue = "";
             $scope.pwdValue = "";
+            $scope.error = "";
         }
 
         $scope.submit = function() {
+           
+           
+
             console.log("in submit fn");
             console.log($scope.emailValue);
-            $location.path('schedulerDashBoard');
-            /*if ($scope.emailValue != "" && $scope.pwdValue != "") {
-                utilsService.login().success(function() {
-                    $location.path('dashboard');
+            if ($scope.emailValue != "" && $scope.pwdValue != "") {
+                utilsService.loginAdmin(
+                    $scope.emailValue,
+                    $scope.pwdValue
+                ).success(function(response) {
+                    console.log(response);
+                    $scope.error = "";
+                    if (response) {
+                        if (response.role_id == 0) {
+                        	$location.path('adminDashboard');
+                        } else if(response.role_id == 1) {
+                        	 $location.path('schedulerDashBoard');
+                        } else {
+                        	$location.path('login');
+                        }
+                    } else {
+                    	$location.path('login');
+                    }
+                   
+                }).error(function(error) {
+                    console.log(error);
+                    $scope.error = "Please enter valid Credentials";
+                    //$location.path('dashboard');
                 });
-            } else { // TODO remove this
-            	console.log("in here else part");
-               $location.path('adminDashboard');
-            }*/
+            } else {
+
+            }
+
+
 
 
         }

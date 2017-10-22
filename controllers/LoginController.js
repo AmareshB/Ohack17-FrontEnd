@@ -6,6 +6,7 @@ app.controller('LoginController', ['$scope', '$location', 'utilsService',
         var init = function() {
             $scope.emailValue = "";
             $scope.pwdValue = "";
+             $scope.error = "";
         }
 
         $scope.submit = function() {
@@ -17,12 +18,14 @@ app.controller('LoginController', ['$scope', '$location', 'utilsService',
                     $scope.pwdValue
                 ).success(function(response) {
                     $location.path('dashboard');
+                     $scope.error = "";
                 }).error(function(error) {
                     console.log(error);
-                    $location.path('dashboard');
+                    $scope.error = "Please enter valid Credentials";
+                   //$location.path('dashboard');
                 });;
             } else {
-            	
+
             }
 
 

@@ -6,7 +6,6 @@ app.controller('DashBoardController', ['$scope', 'utilsService',
 
         var init = function() {
             $scope.clientAvail = "";
-            alert("in alert of dashboard");
             console.log("in init fn");
             //$scope.historyData = data;
             //console.log($scope.historyData);
