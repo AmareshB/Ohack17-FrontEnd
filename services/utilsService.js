@@ -7,9 +7,9 @@ app.service('utilsService', function($http) {
         console.log("in servcies");
         //return $http.get('/util/categoryColors');
 
-      /*  $http.get('http://10.143.191.81:8082/').success(function(response) {
-            console.log(response);
-        });*/
+        /*  $http.get('http://10.143.191.81:8082/').success(function(response) {
+              console.log(response);
+          });*/
 
         var data = [{
             id: "sd1",
@@ -32,10 +32,17 @@ app.service('utilsService', function($http) {
 
     };
 
+    this.login = function(username, pwd) {
+        return $http.post('http://nmtsa.herokuapp.com/login', {
+            "username": username,
+            "password": pwd
+        }, {});
+    };
+
 
     // this.sendRequest=function()
-    // {
-       
+    // {    
+
     // }
 
 
