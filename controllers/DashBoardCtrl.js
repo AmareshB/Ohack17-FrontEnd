@@ -18,9 +18,20 @@ app.controller('DashBoardController', ['$scope', 'utilsService',
 
         };
 
+        $scope.showFeedBack = function(history) {
+           // $dialog.dialog({}).open('modalContent.html');
+           $scope.feedback = history.feedback;
+           $scope.showFeedBackDiv = true;
+        }
 
-        var putData = function() {
-        	//utilsService.getClientHistory();
+        $scope.submitAvailability = function() {
+        	putData($scope.clientAvail);
+        }
+
+
+        var putData = function(availabilityData) {
+            //utilsService.getClientHistory();
+            //TODO : post data here and redirect to Thank you page.
         }
         var getData = function() {
             console.log("in here ");
