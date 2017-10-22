@@ -12,24 +12,33 @@ app.controller('DashBoardController', ['$scope', 'utilsService',
             getData();
 
             $scope.$watch('clientAvail', function(newVal) {
-                putData();
+
+                if (newVal) {
+                   //$scope.putData(newVal);
+                }
+
             });
 
         };
 
         $scope.showFeedBack = function(history) {
-           // $dialog.dialog({}).open('modalContent.html');
-           $scope.feedback = history.feedback;
-           $scope.showFeedBackDiv = true;
+            // $dialog.dialog({}).open('modalContent.html');
+            $scope.feedback = history.feedback;
+            $scope.showFeedBackDiv = true;
         }
 
         $scope.submitAvailability = function() {
-        	putData($scope.clientAvail);
+            $scope.putData($scope.clientAvail);
         }
 
 
-        var putData = function(availabilityData) {
-            //utilsService.getClientHistory();
+         $scope.putData = function(availabilityData) {
+            console.log("availabilityData: ",availabilityData);
+            utilsService.submiAvailability(availabilityData).success(function(res) {
+                console.log(res);
+            }).error(function(err) {
+                console.log(err);
+            });
             //TODO : post data here and redirect to Thank you page.
         }
         var getData = function() {
